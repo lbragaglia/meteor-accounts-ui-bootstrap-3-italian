@@ -1,7 +1,7 @@
-meteor-accounts-ui-bootstrap-3
-=====================================
+meteor-accounts-ui-bootstrap-3-italian
+======================================
 
-Meteor accounts-ui styled with twitter/bootstrap 3
+Meteor accounts-ui styled with twitter/bootstrap 3 (translated in italian)
 
 Prerequisites
 -------------
@@ -20,7 +20,15 @@ You will also need the following:
 How to add to your meteor app
 -----------------------------
 
-`mrt add accounts-ui-bootstrap-3`
+`mrt add accounts-ui-bootstrap-3-italian`
+
+If this doesn't work, add to your smart.json:
+
+```json
+"accounts-ui-bootstrap-3-italian": {
+	"git": "https://github.com/lbragaglia/meteor-accounts-ui-bootstrap-3-italian.git"
+}
+```
 
 How to use
 -------------

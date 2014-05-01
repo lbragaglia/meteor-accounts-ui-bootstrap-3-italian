@@ -209,7 +209,7 @@
     Template._loginButtonsLoggedOutPasswordService.fields = function() {
         var loginFields = [{
             fieldName: 'username-or-email',
-            fieldLabel: 'Username or Email',
+            fieldLabel: 'Username o Email',
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
@@ -332,21 +332,21 @@
     Template._loginButtonsChangePassword.fields = function() {
         return [{
             fieldName: 'old-password',
-            fieldLabel: 'Current Password',
+            fieldLabel: 'Password attuale',
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'New Password',
+            fieldLabel: 'Nuova Password',
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: 'New Password (again)',
+            fieldLabel: 'Nuova Password (ripeti)',
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -513,10 +513,10 @@
                 if (error)
                     loginButtonsSession.errorMessage(error.reason || "Unknown error");
                 else
-                    loginButtonsSession.infoMessage("Email sent");
+                    loginButtonsSession.infoMessage("Email inviato");
             });
         } else {
-            loginButtonsSession.infoMessage("Email sent");
+            loginButtonsSession.infoMessage("Scrivi il tuo indirizzo email");
         }
     };
 
@@ -538,7 +538,7 @@
             if (error) {
                 loginButtonsSession.errorMessage(error.reason || "Unknown error");
             } else {
-                loginButtonsSession.infoMessage("Password changed");
+                loginButtonsSession.infoMessage("Password aggiornata");
 
                 // wait 3 seconds, then expire the msg
                 Meteor.setTimeout(function() {

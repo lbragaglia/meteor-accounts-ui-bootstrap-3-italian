@@ -3,9 +3,9 @@
   <li>
     <a>
       {{#if configured}}
-      <button class="login-button btn{{#if configured}} btn-info{{else}} configure-button btn-danger{{/if}}">Sign in with {{capitalizedName}}</button>
+      <button class="login-button btn{{#if configured}} btn-info{{else}} configure-button btn-danger{{/if}}">Entra con {{capitalizedName}}</button>
       {{else}}
-      <button class="login-button btn{{#if configured}} btn-info{{else}} configure-button btn-danger{{/if}}">Configure {{capitalizedName}} Login</button>
+      <button class="login-button btn{{#if configured}} btn-info{{else}} configure-button btn-danger{{/if}}">Configura {{capitalizedName}} Login</button>
       {{/if}}
     </a>
   </li>
@@ -19,6 +19,6 @@
 
 <template name="_loginButtonsLoggedInSingleLogoutButton">
   <li>
-    <a href="#" id="login-buttons-logout">{{displayName}} Sign Out</a>
+    <a href="#" id="login-buttons-logout">{{displayName}} Esci</a>
   </li>
 </template>

@@ -16,16 +16,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Reset your password</h4>
+            <h4 class="modal-title">Reimposta la tua password</h4>
           </div>
           <div class="modal-body">
             <input id="reset-password-new-password" class="form-control" type="password" placeholder="New Password"/>
             {{> _loginButtonsMessages}}
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" id="login-buttons-cancel-reset-password">Close</a>
+            <a class="btn btn-default" id="login-buttons-cancel-reset-password">Chiudi</a>
             <button class="btn btn-primary" id="login-buttons-reset-password-button">
-              Set password
+              Imposta password
             </button>
           </div>
         </div><!-- /.modal-content -->
@@ -41,16 +41,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Choose a password</h4>
+            <h4 class="modal-title">Scegli una password</h4>
           </div>
           <div class="modal-body">
             <input id="enroll-account-password" class="form-control" type="password" placeholder="New Password" />
             {{> _loginButtonsMessages}}
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">Close</a>
+            <a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">Chiudi</a>
             <button class="btn btn-primary" id="login-buttons-enroll-account-button">
-              Set password
+              Imposta password
             </button>
           </div>
         </div><!-- /.modal-content -->
@@ -61,10 +61,24 @@
 
 <template name="_justVerifiedEmailDialog">
   {{#if visible}}
-    <div class="accounts-dialog accounts-centered-dialog">
-      Email verified
-      <div class="login-button" id="just-verified-dismiss-button">Dismiss</div>
-    </div>
+    <div class="modal" id="login-buttons-enroll-account-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Scegli una password</h4>
+          </div>
+          <div class="modal-body accounts-dialog accounts-centered-dialog">
+      Indirizzo email verificato
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary login-button" id="just-verified-dismiss-button">
+              Chiudi
+            </button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dalog -->
+    </div><!-- /.modal -->
   {{/if}}
 </template>
 
@@ -74,13 +88,13 @@
       <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
-                  <h4 class="modal-title">Configure Service</h4>
+                  <h4 class="modal-title">Configura il servizio</h4>
               </div>
               <div class="modal-body">
                   <div id="configure-login-service-dialog" class="accounts-dialog accounts-centered-dialog">
                       {{> configurationSteps}}
                       <p>
-                      Now, copy over some details.
+                      Ora, copia alcuni codici.
                       </p>
                       <p>
                       <table>
@@ -104,11 +118,11 @@
               </div>
               <div class="modal-footer new-section">
                   <div class="login-button btn btn-danger configure-login-service-dismiss-button">
-                      I'll do this later
+                      Non ora
                   </div>
                   <div class="login-button login-button-configure btn btn-success {{#if saveDisabled}}login-button-disabled{{/if}}"
                       id="configure-login-service-dialog-save-configuration">
-                      Save Configuration
+                      Salva la configurazione
                   </div>
               </div>
           </div>
@@ -121,7 +135,7 @@
   {{#if visible}}
     <div class="accounts-dialog accounts-centered-dialog" id="login-buttons-message-dialog">
       {{> _loginButtonsMessages}}
-      <div class="login-button" id="messages-dialog-dismiss-button">Dismiss</div>
+      <div class="login-button" id="messages-dialog-dismiss-button">Chiudi</div>
     </div>
   {{/if}}
 </template>
