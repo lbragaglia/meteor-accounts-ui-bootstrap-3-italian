@@ -1,5 +1,5 @@
 {
-  "name": "accounts-ui-bootstrap-3-italian",
+  "name": "lbragaglia:accounts-ui-bootstrap-3-italian",
   "description": "Meteor's accounts templates styled for bootstrap-3 migrated very simply to Blaze - some features may have regressed - Italian translation",
   "homepage": "https://github.com/lbragaglia/meteor-accounts-ui-bootstrap-3-italian",
   "author": "lbragaglia (https://github.com/lbragaglia/meteor-accounts-ui-bootstrap-3-italian)",
